@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>V/AIBOU 導入ご提案 エグゼクティブサマリ — PRO-2026-DLC-008-rev5.9</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap');
+
+@page {
+  size: A4;
+  margin: 14mm 14mm 16mm 14mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: 'Inter', sans-serif;
+    font-size: 8pt;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    color: #888;
+  }
+  @bottom-left {
+    content: "PRO-2026-DLC-008-rev5.9 / EXECUTIVE SUMMARY";
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #999;
+  }
+  @bottom-right {
+    content: "VAIZO INTERNAL — CONFIDENTIAL";
+    font-family: 'Inter', sans-serif;
+    font-size: 7pt;
+    font-weight: 400;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #999;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  background: #fff;
+  color: #000;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+@media screen {
+  body {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 14mm 10mm;
+  }
+}
+
+.meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3mm;
+  margin-bottom: 5mm;
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #000;
+}
+.meta-bar .right { font-weight: 300; color: #444; }
+
+.title-block {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10mm;
+  align-items: end;
+  padding-bottom: 4mm;
+  border-bottom: 1px solid #000;
+  margin-bottom: 5mm;
+}
+.title-logo {
+  font-family: 'Inter', sans-serif;
+  font-size: 44pt;
+  font-weight: 900;
+  letter-spacing: -0.045em;
+  line-height: 0.9;
+  color: #000;
+}
+.title-logo .slash { display: inline-block; margin: 0 0.04em; }
+.title-info .eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  margin-bottom: 2mm;
+  color: #000;
+}
+.title-info .target {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1mm;
+}
+.title-info .target-sub {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  color: #444;
+}
+
+.tagline-block {
+  margin: 5mm 0;
+  padding: 5mm 6mm;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+}
+.tagline-jp {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 14pt;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #000;
+  line-height: 1.4;
+  margin-bottom: 2mm;
+}
+.tagline-en {
+  font-family: 'Inter', sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  letter-spacing: 0.55em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.summary-statement {
+  margin: 5mm 0;
+  padding: 4mm 5mm;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 9.5pt;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #000;
+}
+.summary-statement b { font-weight: 700; }
+
+.summary-lead {
+  margin: 5mm 0 3mm 0;
+  padding: 4mm 5mm;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 10pt;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #000;
+  text-align: center;
+}
+.summary-lead b { font-weight: 700; }
+
+.conclusion-badge {
+  display: inline-block;
+  padding: 1.6mm 5mm 1.5mm 5mm;
+  margin: 4mm 0 0 0;
+  background: #000;
+  color: #fff;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11pt;
+  font-weight: 900;
+  letter-spacing: 0.3em;
+  line-height: 1.3;
+  border-radius: 0;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 5mm 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 9pt;
+  font-weight: 300;
+}
+.summary-table th {
+  width: 26%;
+  text-align: left;
+  padding: 4mm 4.5mm;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #d9d9d9;
+  vertical-align: middle;
+  background: #f5f5f5;
+}
+.summary-table td {
+  padding: 4mm 4.5mm;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #d9d9d9;
+  vertical-align: middle;
+  font-size: 9pt;
+  line-height: 1.75;
+  color: #000;
+}
+.summary-table tr:last-child th,
+.summary-table tr:last-child td {
+  border-bottom: 1px solid #000;
+}
+.summary-table b { font-weight: 700; color: #000; }
+
+.tax-note {
+  margin: 1mm 0 3mm 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 400;
+  color: #888;
+  text-align: right;
+  letter-spacing: 0;
+}
+.tax-note b { font-weight: 600; color: #555; }
+.summary-table .small {
+  display: block;
+  margin-top: 1mm;
+  font-size: 7.5pt;
+  font-weight: 300;
+  color: #666;
+  letter-spacing: 0;
+}
+.plan-row {
+  margin-bottom: 2mm;
+  line-height: 1.55;
+}
+.plan-row:last-child { margin-bottom: 0; }
+.plan-row b { display: inline-block; margin-right: 2mm; }
+.cell-sub {
+  display: block;
+  margin-top: 0.8mm;
+  font-size: 7.5pt;
+  color: #666;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.lecture-tag {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-top: auto;
+  padding: 1.2mm 2.8mm;
+  background: #ececec;
+  border: 1pt solid #b8b8b8;
+  color: #3a3a3a;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+.lecture-tag svg {
+  width: 11px;
+  height: 11px;
+  margin-right: 2mm;
+  fill: #3a3a3a;
+  flex-shrink: 0;
+}
+.pillar-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.pillar-body > .lecture-tag {
+  margin-top: auto;
+}
+.plan-cond {
+  font-size: 8pt;
+  color: #555;
+  margin-left: 1.5mm;
+}
+
+.section-box {
+  background: #ffffff;
+  padding: 5mm 7mm 6mm 7mm;
+  margin: 0 0 7mm 0;
+  border: 0.5pt solid #e2e2e2;
+  border-radius: 2mm;
+  box-shadow: 0 3pt 9pt rgba(0,0,0,0.07), 0 1pt 2pt rgba(0,0,0,0.04);
+  page-break-inside: avoid;
+}
+.section-box > h2:first-child {
+  margin-top: 1mm;
+}
+
+h2 {
+  margin: 2mm 0 3mm 0;
+  padding-bottom: 2mm;
+  border-bottom: 2.6pt solid #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #000;
+  page-break-after: avoid;
+  display: flex;
+  align-items: center;
+}
+h2 .num {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 1mm 2.8mm;
+  font-family: 'Inter', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-right: 3mm;
+  line-height: 1.3;
+}
+.section-note {
+  margin: 0 0 3mm 0;
+  padding: 2.5mm 4mm;
+  background: #f5f5f5;
+  border-left: 3pt solid #000;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 9pt;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #000;
+}
+.section-note b { font-weight: 700; }
+
+h3 {
+  margin: 3mm 0 1mm 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #000;
+}
+
+p {
+  margin: 0 0 2mm 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+strong { font-weight: 700; color: #000; }
+
+ul {
+  margin: 0 0 2mm 0;
+  padding-left: 4mm;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+li { margin-bottom: 0.5mm; }
+li b, li strong { font-weight: 700; color: #000; }
+
+.small {
+  font-size: 7.5pt;
+  color: #666;
+  font-weight: 300;
+}
+
+.core-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin: 3mm 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.core-cell {
+  padding: 4mm 4mm 4mm 0;
+  border-right: 1px solid #d9d9d9;
+}
+.core-cell:nth-child(n+2) { padding-left: 4mm; }
+.core-cell:last-child { padding-right: 0; border-right: none; }
+.core-cell-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2mm;
+}
+.core-cell-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 12pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #000;
+  margin-bottom: 2mm;
+}
+.core-cell-body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8pt;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #2a2a2a;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  margin: 3mm 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.pillar {
+  padding: 3mm 4mm 3mm 0;
+  border-right: 1px solid #d9d9d9;
+  page-break-inside: avoid;
+  display: flex;
+  flex-direction: column;
+}
+.pillar:nth-child(2n) {
+  padding-right: 0;
+  padding-left: 4mm;
+  border-right: none;
+}
+.pillar:nth-child(n+3) {
+  border-top: 1px solid #d9d9d9;
+  margin-top: -1px;
+  padding-top: 3mm;
+}
+.pillar-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 1.5mm;
+}
+.pillar-role {
+  font-family: 'Inter', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  color: #000;
+  margin-bottom: 1.5mm;
+}
+.pillar-price-badge {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  padding: 1.2mm 3mm 1.2mm 3mm;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-size: 9.5pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  margin-bottom: 2mm;
+}
+.pillar-price-badge .badge-step {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  margin-right: 2mm;
+  opacity: 0.75;
+}
+.pillar-title {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 11pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #000;
+  margin-bottom: 1.5mm;
+}
+.pillar-body {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8pt;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #2a2a2a;
+}
+.pillar-body b, .pillar-body strong {
+  font-weight: 700;
+  color: #000;
+}
+
+.price-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  margin: 3mm 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.price-cell {
+  padding: 4mm 5mm 4mm 0;
+  border-right: 1px solid #d9d9d9;
+}
+.price-cell:last-child {
+  padding-right: 0;
+  padding-left: 5mm;
+  border-right: none;
+}
+.price-cell-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2mm;
+}
+.price-cell-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 24pt;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #000;
+  margin-bottom: 1mm;
+}
+.price-cell-value .unit {
+  font-size: 9pt;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #444;
+}
+.price-cell-note {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #2a2a2a;
+}
+.price-cell-note b { font-weight: 700; color: #000; }
+
+.roi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin: 3mm 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.roi-cell {
+  padding: 4mm 4mm 4mm 0;
+  border-right: 1px solid #d9d9d9;
+  text-align: left;
+}
+.roi-cell:nth-child(n+2) { padding-left: 4mm; }
+.roi-cell:last-child { padding-right: 0; border-right: none; }
+.roi-cell-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: 2mm;
+}
+.roi-cell-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 18pt;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #000;
+  margin-bottom: 1mm;
+}
+.roi-cell-unit {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 300;
+  color: #666;
+  line-height: 1.5;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2mm 0 3mm 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8pt;
+  font-weight: 400;
+  page-break-inside: avoid;
+}
+th {
+  text-align: left;
+  padding: 2mm 2.5mm;
+  font-family: 'Inter', sans-serif;
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+td {
+  padding: 2mm 2.5mm;
+  border-bottom: 1px solid #d9d9d9;
+  vertical-align: top;
+}
+tr:last-child td { border-bottom: 1px solid #000; }
+td b, td strong { font-weight: 700; color: #000; }
+
+.next-action {
+  margin: 9mm 0 0 0;
+  padding: 6mm 7mm 6mm 8mm;
+  background: #1a1a1a;
+  border: none;
+  border-left: 4pt solid #FF6A00;
+  border-radius: 1.5mm;
+  page-break-inside: avoid;
+  color: #ffffff;
+  box-shadow: 0 6pt 16pt rgba(0,0,0,0.18), 0 2pt 4pt rgba(0,0,0,0.10);
+}
+.next-action-label {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 8.5pt;
+  font-weight: 900;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background: #FF6A00;
+  padding: 1.3mm 3.5mm;
+  margin-bottom: 4mm;
+  line-height: 1.3;
+}
+.next-action-statement {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 13pt;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  margin-bottom: 4mm;
+  line-height: 1.5;
+}
+.next-action-statement b { color: #FF9A4A; }
+.next-action-note {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 8pt;
+  font-weight: 400;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.65;
+  border-top: 1pt solid rgba(255,106,0,0.45);
+  padding-top: 3.5mm;
+}
+</style>
+</head>
+<body>
+
+<div class="meta-bar">
+  <div>VAIZO INTERNAL</div>
+  <div class="right">2026.05.08 — Executive Summary</div>
+</div>
+
+<div class="title-block">
+  <div class="title-logo">V<span class="slash">/</span>AIBOU</div>
+  <div class="title-info">
+    <div class="eyebrow">PROPOSAL FOR ENTERPRISE — 2 PAGES</div>
+    <div class="target">株式会社ディライト・カンパニー 御中</div>
+    <div class="target-sub">代表取締役 小島 康平 様 ／ 株式会社VAIZO ／ DOC NO. PRO-2026-DLC-008-rev5.9</div>
+  </div>
+</div>
+
+<div class="tagline-block">
+  <div class="tagline-jp">経営者の相棒であり、経営のバイブル。</div>
+  <div class="tagline-en">Your Partner. Your Bible.</div>
+</div>
+
+<div class="summary-lead">
+<b>V/AIBOU は、24時間365日 病まない・休まない・辞めない「AI社員」を提供するプラットフォーム</b>です。<br>
+本提案では、株式会社ディライト・カンパニー様専用に下記をご提供します。
+</div>
+
+<div class="conclusion-badge">結論</div>
+<p class="tax-note">※ 本書類に記載の金額はすべて<b>税別（税抜）表記</b>です。</p>
+<table class="summary-table">
+  <tr>
+    <th>提供するAI社員</th>
+    <td><b>4種のAI社員</b><br><span class="cell-sub">V/SHOKI（書記）・V/NIPPO（日報）・V/KPI（KPI管理・分析）・V/MENDAN（面談）</span></td>
+  </tr>
+  <tr>
+    <th>月額プラン<span class="small">v-aibou.com 公式2プラン体系</span></th>
+    <td>
+      <div class="plan-row"><b>Start　月額3万円</b><span class="plan-cond">V/SHOKI 1名のみ稼働</span></div>
+      <div class="plan-row"><b>Unlimited　月額5万円</b><span class="plan-cond">2名目稼働以降は一律／API利用量上限あり</span></div>
+    </td>
+  </tr>
+  <tr>
+    <th>個別開発（買い切り）</th>
+    <td><b>3 STEP 合計 120万円</b>　補助金活用で <b>実質負担 60万円</b></td>
+  </tr>
+</table>
+
+<section class="section-box">
+<h2><span class="num">§1</span>V/AIBOU 3つのコア機能</h2>
+<div class="core-grid">
+  <div class="core-cell">
+    <div class="core-cell-label">CORE 01</div>
+    <div class="core-cell-title">自走型AI</div>
+    <div class="core-cell-body">指示待ちではなく、状況を読んで「次はこれをやるべき」と<b>自ら提案・実行</b>する</div>
+  </div>
+  <div class="core-cell">
+    <div class="core-cell-label">CORE 02</div>
+    <div class="core-cell-title">一気通貫</div>
+    <div class="core-cell-body">リサーチ → 資料作成 → 実装まで、<b>AIが手を動かして完成</b>させる</div>
+  </div>
+  <div class="core-cell">
+    <div class="core-cell-label">CORE 03</div>
+    <div class="core-cell-title">文脈学習</div>
+    <div class="core-cell-body">御社の戦略・ポリシー・過去判断・社内の<b>暗黙知を学習</b>して動作する</div>
+  </div>
+</div>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§2</span>提供する4種のAI社員</h2>
+<div class="section-note"><b>STEP 2〜4は御社専用のオーダーメード開発</b>として個別に設計・構築します（要件定義から検収まで一貫対応）。</div>
+<div class="pillar-grid">
+  <div class="pillar">
+    <div class="pillar-role">V/SHOKI</div>
+    <div class="pillar-price-badge"><span class="badge-step">START PLAN</span>月額 3万円</div>
+    <div class="pillar-title">書記AI社員（議事録ナレッジ化）</div>
+    <div class="pillar-body"><b>Gemini で文字起こしした議事録</b>を自動で取得し、要約・タグ付けで<b>ナレッジ化</b> → <b>Google Drive に自動整理・保存</b>。検索可能なDBへ蓄積し、社内の暗黙知を資産化。<b>処理の深さにもよるが、月100時間程度の処理であれば月額3万円で対応可能。</b><span class="lecture-tag"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h7a3 3 0 0 1 3 3v13H6a2 2 0 0 1-2-2V4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v13h8a2 2 0 0 0 2-2V4z" opacity="0.55"/></svg>60分間の操作レクチャー付</span></div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-role">V/NIPPO</div>
+    <div class="pillar-price-badge"><span class="badge-step">STEP 2</span>30万円</div>
+    <div class="pillar-title">日報AI社員（日報の報告メール仕分け）</div>
+    <div class="pillar-body">日報の報告メールを自動で取得→送信者ごとに仕分け→KPI/リスク/機会を分類抽出。スプシ集計まで一気通貫。<span class="lecture-tag"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h7a3 3 0 0 1 3 3v13H6a2 2 0 0 1-2-2V4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v13h8a2 2 0 0 0 2-2V4z" opacity="0.55"/></svg>60分間の操作レクチャー付</span></div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-role">V/KPI</div>
+    <div class="pillar-price-badge"><span class="badge-step">STEP 3</span>40万円</div>
+    <div class="pillar-title">KPI管理・分析AI社員（スプシ分析）</div>
+    <div class="pillar-body">KPIスプシを自動で巡回。<b>欠損エラー検出を最重要視</b>し、日次・週次・月次・任意で異常通知。<span class="lecture-tag"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h7a3 3 0 0 1 3 3v13H6a2 2 0 0 1-2-2V4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v13h8a2 2 0 0 0 2-2V4z" opacity="0.55"/></svg>60分間の操作レクチャー付</span></div>
+  </div>
+  <div class="pillar">
+    <div class="pillar-role">V/MENDAN</div>
+    <div class="pillar-price-badge"><span class="badge-step">STEP 4</span>50万円</div>
+    <div class="pillar-title">面談AI社員（人事査定等）</div>
+    <div class="pillar-body">月1回 全従業員に <b>テキストチャットで深掘り面談</b>。共有先（本人のみ／上司／人事／経営層）任意設定可。<span class="lecture-tag"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h7a3 3 0 0 1 3 3v13H6a2 2 0 0 1-2-2V4z"/><path d="M20 4h-7a3 3 0 0 0-3 3v13h8a2 2 0 0 0 2-2V4z" opacity="0.55"/></svg>60分間の操作レクチャー付</span></div>
+  </div>
+</div>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§3</span>金額感サマリ</h2>
+<div class="price-pair">
+  <div class="price-cell">
+    <div class="price-cell-label">月額（v-aibou.com 2プラン体系）</div>
+    <div class="price-cell-value">3万円<span class="unit"> → </span>5万円<span class="unit"> / 月（税抜）</span></div>
+    <div class="price-cell-note"><b>Start 3万円</b>（V/SHOKI 1名のみ稼働）→ <b>2名目稼働以降は一律 5万円</b>。<br><b>※API利用量の上限あり。</b>移行は顧客承認制。突然の値上げなし。</div>
+  </div>
+  <div class="price-cell">
+    <div class="price-cell-label">個別開発（買い切り・補助金1/2対象）</div>
+    <div class="price-cell-value">120万円<span class="unit"> / 3STEP合計（税抜）</span></div>
+    <div class="price-cell-note">補助金 60万円 受領後の <b>実質負担 60万円</b>。<br><b>要件定義費は補助金採択後にお支払い／開発費は検収後にお支払い</b>（契約時の着手金なし）。</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>STEP</th><th>AI社員</th><th>合計（税抜）</th><th>補助金</th><th>実質負担</th></tr>
+  <tr><td>STEP 2</td><td>V/NIPPO（日報AI社員）</td><td>30万円</td><td>15万円</td><td>15万円</td></tr>
+  <tr><td>STEP 3</td><td>V/KPI（KPI管理・分析AI社員）</td><td>40万円</td><td>20万円</td><td>20万円</td></tr>
+  <tr><td>STEP 4</td><td>V/MENDAN（面談AI社員・人事査定等）</td><td>50万円</td><td>25万円</td><td>25万円</td></tr>
+  <tr><td colspan="2"><b>3 STEP 合計</b></td><td><b>120万円</b></td><td><b>60万円</b></td><td><b>60万円</b></td></tr>
+</table>
+
+<div class="section-note"><b>補足：</b>補助金採択以降の月額フィーを<b>一括前払い</b>でお支払いいただくことで、当該フィーも<b>補助金の対象経費</b>として申請可能です（採択結果による）。これにより実質負担をさらに圧縮できます。</div>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§4</span>投資対効果（店長層・時給¥1,800ベース）</h2>
+<div class="section-note"><b>計算前提：</b>店長層 月給<b>約29万円</b>（月160h労働で時給換算 <b>約¥1,800</b>）を想定。<br>株式会社ディライト・カンパニー様の求人公開情報における販売スタッフ上限 月給254,000円に役職手当・インセンティブを加味した中位値として算出。20店舗想定。</div>
+<div class="roi-grid">
+  <div class="roi-cell">
+    <div class="roi-cell-label">開発実質負担（補助金後）</div>
+    <div class="roi-cell-value">60万円</div>
+    <div class="roi-cell-unit">Start 3万円（V/SHOKI 1名のみ稼働） → Unlimited 5万円（2名目稼働以降は一律／API利用量上限あり）</div>
+  </div>
+  <div class="roi-cell">
+    <div class="roi-cell-label">年間効果（時給¥1,800・20店舗）</div>
+    <div class="roi-cell-value">約291万円</div>
+    <div class="roi-cell-unit">業務時間削減 230万円 ＋ コスト削減 61万円</div>
+  </div>
+  <div class="roi-cell">
+    <div class="roi-cell-label">投資回収期間</div>
+    <div class="roi-cell-value">約3.1ヶ月</div>
+    <div class="roi-cell-unit">月純便益 19.3万円（月効果24.3万円 − 月額コスト5万円）で開発実質負担60万円を回収。</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>区分</th><th>項目</th><th>Before（店舗×時間×単価）</th><th>After（店舗×時間×単価）</th><th>削減（年額）</th></tr>
+  <tr><td>業務時間削減</td><td><b>V/SHOKI 議事録ナレッジ化</b><br><span class="cell-sub">（週1会議＋整理＋過去議事録検索）</span></td><td>20店舗 × 2時間 × ¥1,800<br>＝ 72,000円/月</td><td>20店舗 × 20分 × ¥1,800<br>＝ 12,000円/月</td><td>▲72万円</td></tr>
+  <tr><td>業務時間削減</td><td><b>V/NIPPO 日報仕分け</b><br><span class="cell-sub">（KPI抽出・月次集計含む）</span></td><td>20店舗 × 1.5時間 × ¥1,800<br>＝ 54,000円/月</td><td>20店舗 × 10分 × ¥1,800<br>＝ 6,000円/月</td><td>▲57.6万円</td></tr>
+  <tr><td>業務時間削減</td><td><b>V/MENDAN 上司面談</b><br><span class="cell-sub">（店舗あたり従業員5名 × 30分面談 ＋ 報告整理0.5時間 ＝ 月3時間）</span></td><td>20店舗 × 3時間 × ¥1,800<br>＝ 108,000円/月</td><td>20店舗 × 40分 × ¥1,800<br>＝ 24,000円/月</td><td>▲100.8万円</td></tr>
+  <tr><td>コスト削減</td><td>V/KPI 在庫差異・経理修正コスト</td><td>3万円/月（36万円/年）</td><td>¥0/月（¥0/年）</td><td>▲36万円</td></tr>
+  <tr><td>コスト削減</td><td>V/MENDAN 離職コスト（年0.5人回避）</td><td>50万円/年</td><td>25万円/年</td><td>▲25万円</td></tr>
+  <tr><td colspan="2"><b>総合計（年額）</b></td><td><b>約367万円</b></td><td><b>約75万円</b></td><td><b>▲約291万円</b></td></tr>
+</table>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§5</span>「効果を見てから進める」ノーリスク導入設計</h2>
+<ul>
+  <li><b>STEP 1（V/SHOKI）のみで開始可能</b>（<b>Start プラン 3万円/月</b>で議事録機能から）</li>
+  <li>STEP 2/3/4 は <b>要件定義費を補助金採択後にお支払い／開発費は検収後にお支払い</b>（契約時の着手金は不要）</li>
+  <li>各STEPで効果が見えなければ <b>次STEP保留も可</b></li>
+  <li>補助金不採択時は <b>STEP 単位で中止選択可</b>（要件定義費のみ顧客負担）</li>
+</ul>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§6</span>スケジュール</h2>
+<table>
+  <tr><th style="width: 25%;">時期</th><th>イベント</th></tr>
+  <tr><td>2026/05 中〜下旬</td><td>提案クロージング協議／宮城県中小企業支援室への事前相談</td></tr>
+  <tr><td><b>2026/05 月末</b></td><td><b>契約締結（クロージング）</b>（要件定義料金は補助金採択後に受領）</td></tr>
+  <tr><td>2026/06</td><td>STEP 1 キックオフ／V/SHOKI 構築・最初の議事録完成 → <b>Start 3万円</b> 課金開始</td></tr>
+  <tr><td>2026/07 中旬</td><td>宮城県デジタル化支援 申請書 一括提出</td></tr>
+  <tr><td><b>2026/08 下旬</b></td><td><b>採択発表 → STEP 2-4 要件定義料金 35万円 受領</b>／要件定義作業着手</td></tr>
+  <tr><td>2026/09 中旬</td><td>交付決定 → STEP 2-4 並行開発キックオフ（着手金なし）</td></tr>
+  <tr><td>2026/12</td><td>V/NIPPO 検収・20万円 後払い（翌月から <b>Unlimited 5万円</b> へ移行）</td></tr>
+  <tr><td>2027/01 〜 02</td><td>V/KPI（30万円）→ V/MENDAN（35万円）順次検収・後払い／Unlimited 月額継続</td></tr>
+  <tr><td>2027/02 〜 04</td><td>実績報告・確定検査 → <b>2027/04 補助金 60万円 入金</b></td></tr>
+</table>
+</section>
+
+<section class="section-box">
+<h2><span class="num">§7</span>追加提案 — 教育支援プログラム（オプション）</h2>
+
+<div class="price-pair">
+  <div class="price-cell">
+    <div class="price-cell-label">月料金</div>
+    <div class="price-cell-value">10万円<span class="unit"> / 月（税抜）</span></div>
+    <div class="price-cell-note">月4回（週1ペース）／60分セッション／<b>参加上限 5名/回</b>（通常3名のところ、特別対応）</div>
+  </div>
+  <div class="price-cell">
+    <div class="price-cell-label">1セッション構成（60分）</div>
+    <div class="price-cell-value" style="font-size: 13pt;">20分 → 30分 → 10分</div>
+    <div class="price-cell-note"><b>動画コンテンツ視聴（20分）</b> → <b>アクティブラーニング（30分）</b> → <b>Q&A（10分）</b><br>マイクロラーニング型ベストプラクティス設計</div>
+  </div>
+</div>
+
+<table>
+  <tr><th>項目</th><th>内容</th></tr>
+  <tr><td>1人あたり1回コスト</td><td>¥5,000（業界相場 1万〜3万円/h の1/2〜1/6）</td></tr>
+  <tr><td>カリキュラム例</td><td>第1週 V/SHOKI議事録 → 第2週 V/SHOKI壁打ち → 第3週 V/NIPPO → 第4週 V/KPI 分析実践</td></tr>
+  <tr><td>期待効果</td><td>AI Native 中核人材5名育成 ／ V/AIBOU 社内活用率 50% → 80% 引き上げ</td></tr>
+  <tr><td>ROI（教育込み総合）</td><td>+¥1,705,000/年（活用率引き上げ¥405,000＋人材育成価値250万円 − 教育投資120万円）</td></tr>
+</table>
+</section>
+
+<div class="next-action">
+  <div class="next-action-label">Next Action</div>
+  <div class="next-action-statement">5月末クロージング → 6月から V/SHOKI（議事録AI社員）稼働開始（Start 3万円）</div>
+  <div class="next-action-note">詳細条件は契約書等にて別途ご案内します。<br>v-aibou.com — YOUR PARTNER. YOUR BIBLE.</div>
+</div>
+
+</body>
+</html>
